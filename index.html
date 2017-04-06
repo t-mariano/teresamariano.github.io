@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quizzler</title>
+    <meta name="description" content=" ">
+    <link rel="canonical" href=" ">
+
+    <!-- Bootstrap core CSS. Using CDN link instead of local hosting. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- custom CSS -->
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  </head>
+  <body>
+    <!-- Opening Page -->
+    <!-- start of continer b/c it is full-width container that spans the entire viewport width-->
+    <!-- using col-xs-* b/c it prevents vertical stacking on sm screens -->
+    <div class="container-fluid">
+      <!-- <div class="flex-grid"> -->
+
+      <!-- Intro page -->
+      <div id="intro"> 
+        <div class="row header">
+          <div class="col-xs-4" id="question_number"> <!-- $('#question_number p').show();-->
+            <p class="header-label">Question</p>
+            <p id="question_data"></p>
+            <input type="hidden" id="question_value" value="0">
+          </div>
+          <div class="col-xs-4" id="logo">
+            <div class="logo-box">
+              <span><img src="img/logo.png"></span>
+            </div>
+          </div>
+          <div class="col-xs-4" id="score_box"> <!-- $('#score_box p').show();-->
+            <p class="header-label">Score</p>
+            <p id="score"></p>
+            <input type="hidden" id="score_value" value="0">
+          </div>
+        </div>
+
+          <!-- Visible on-page content -->
+        <div class="row content">
+          <div class="col-md-8 col-md-offset-2">
+            <h1 id="welcome_title">Want To Play A Game?</h1>
+            <p id="bumper_text">At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.</p>
+
+            <p id="question" class="quiz-question">True or False: Dophins are jerks and provide a robust synopsis for high level overviews</p>
+
+            <h1 id="result_headline">You Scored <span id="final_score">XX</span> Out Of 3</h1>
+            <p id="result_message">Leverage agile frameworks to provide a robust synopsis for high level overviews.</p>
+
+            <!-- Game On button text never changes -->
+            <p><a id="game_start" class="btn btn-primary btn-lg" href="#" role="button">Game On!</a></p> 
+
+          </div>
+        </div>
+
+        <!-- Answers -->
+        <div id="answers" class="row content">
+          <div class="col-md-6">
+            <p><a class="btn btn-lg" id="left_btn" href="#" role="button">Answer Option One</a></p>
+          </div>
+          <div class="col-md-6">
+            <p><a class="btn btn-lg" id="right_btn" href="#" role="button">Answer Option Two</a></p>
+          </div>
+        </div>
+
+        <!-- Visible only on answer click -->
+        <div id="play_options" class="row content">
+          <div class="col-md-8 col-md-offset-2">
+            <p id="next_question" class="next">
+              <a href="#">Next Question</a>
+            </p>
+            <p id="see_score" class="next">
+              <a href="#">See Score!</a>
+            </p>
+            <p id="play_again" class="next">
+              <a href="#">Play Again</a>
+            </p>
+            <p id="see_answers" class="next">
+              <a href="#">See Answers</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  <!-- end of container -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

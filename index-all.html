@@ -1,0 +1,141 @@
+<!-- For Reference Only -->
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quizzler</title>
+    <meta name="description" content=" ">
+    <link rel="canonical" href=" ">
+
+    <!-- Bootstrap core CSS. Using CDN link instead of local hosting. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- custom CSS -->
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  </head>
+  <body>
+    <!-- Opening Page -->
+    <!-- start of continer b/c it is full-width container that spans the entire viewport width-->
+    <!-- using col-xs-* b/c it prevents vertical stacking on sm screens -->
+    <div class="container-fluid">
+      <!-- <div class="flex-grid"> -->
+
+      <!-- Intro page -->
+      <div id="intro"> 
+        <div class="row header">
+          <div class="col-xs-4" id="question_number">
+          </div>
+          <div class="col-xs-4" id="logo">
+            <div class="logo-box">
+              <span><img src="img/logo.png"></span>
+            </div>
+          </div>
+          <div class="col-xs-4" id="score">
+          </div>
+        </div>
+
+        <div class="row content">
+          <div class="col-md-8 col-md-offset-2">
+            <h1>Want To Play A Game?</h1>
+            <p>At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Game On!</a></p>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <!--Quiz page  -->
+      <div id="quiz"> 
+        
+        <div class="row header">
+          <div class="col-xs-4" id="question_number">
+            <p>Question</p>
+            <p>1 of 3</p>
+          </div>
+          <div class="col-xs-4" id="logo">
+            <div class="logo-box">
+              <span><img src="img/logo.png"></span>
+            </div>
+          </div>
+          <div class="col-xs-4" id="score">
+            <p>Score</p>
+            <p>1234</p>
+          </div>
+        </div>
+
+        <!-- Quiz question -->
+        <div class="row content">
+          <div class="col-md-8 col-md-offset-2">
+            <p class="quiz-question">True or False: Dophins are jerks and provide a robust synopsis for high level overviews</p>
+          </div>
+        </div>
+
+        <!-- Answers -->
+        <div class="row content">
+          <div class="col-md-6">
+            <p><a class="btn btn-lg" id="left-btn" href="#" role="button">Answer Option One</a></p>
+          </div>
+          <div class="col-md-6">
+            <p><a class="btn btn-lg" id="right-btn" href="#" role="button">Answer Option Two</a></p>
+          </div>
+        </div>
+
+        <!-- Visible only on answer click -->
+        <div class="row content">
+          <div class="col-md-8 col-md-offset-2">
+            <p class="next">
+              <a href="#" >Next Question</a> 
+            </p>
+          </div>
+        </div>
+
+        <!-- Visible only at last answer click -->
+        <div id="see-score" class="row content">
+          <div class="col-md-8 col-md-offset-2">
+            <p class="next">
+              <a href="#" >See Score!</a> 
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Results page  -->
+      <div id="results"> 
+        <div class="row header">
+          <div class="col-xs-4" id="question_number">
+          </div>
+          <div class="col-xs-4" id="logo">
+            <div class="logo-box">
+              <span><img src="img/logo.png"></span>
+            </div>
+          </div>
+          <div class="col-xs-4" id="score">
+          </div>
+        </div>
+
+        <div class="row content">
+          <div class="col-md-8 col-md-offset-2">
+            <h1>Dynamic Message Will Be Generated Here</h1>
+            <p>Leverage agile frameworks to provide a robust synopsis for high level overviews.</p>
+            <p class="more">
+              <a href="#" >Play again</a>
+            </p>
+            <p class="more">
+              <a href="#" >See Answers</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  <!-- end of container -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

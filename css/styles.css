@@ -1,0 +1,93 @@
+body {
+  background-color: #C0BABC;
+  display: block;
+}
+
+h1, p {
+  align-content: center;
+}
+
+p {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+img {
+  /* Responsive images (ensure images don't scale beyond their parents) */
+  max-width: 100%;
+  /* Part 1: Set a maxium relative to the parent */
+  width: auto\9;
+  /* IE7-8 need help adjusting responsive images */
+  height: auto;
+  /* Part 2: Scale the height according to the width, otherwise you get stretching */
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic; 
+}
+
+.container {
+  display: grid;
+}
+
+/*.flex-grid {
+  display: inline-block;
+}
+*/
+
+#intro #quiz {
+  width: 100%;
+}
+
+#logo {
+  color: #E270A9;
+  
+}
+
+.logo-box {
+  width: 140px;
+  margin: 10px auto;
+}
+
+.content {
+  
+}
+
+.btn {
+  background-color: #3C4859;
+  color: white;
+}
+
+/*Quiz Section*/
+.quiz-question {
+  font-family: Garamond;
+  font-size: 26px;
+}
+
+.answers {
+  display: block;
+}
+
+/*#left-btn: {
+  clear
+}
+#right-btn {
+  float: right;
+}*/
+#quiz {
+  width: 100%;
+}
+
+.header, .content {
+  text-align:center;
+}
+
+/* Initial State */
+/*every id that should be display: none on load*/
+
+#question_number p, #score_box p, #question, #left_btn, #right_btn, #play_options, #next_question, #see_score, #result_headline, #result_message, #play_again, #see_answers {
+  display: none;
+}
+
+
+
+
