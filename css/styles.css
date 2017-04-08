@@ -1,6 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #C0BABC;
-  display: block;
+  /*display: block;*/
+  position: relative;
+  height: 100vh;
 }
 
 h1, p {
@@ -25,15 +31,6 @@ img {
   -ms-interpolation-mode: bicubic; 
 }
 
-.container {
-  display: grid;
-}
-
-/*.flex-grid {
-  display: inline-block;
-}
-*/
-
 #intro #quiz {
   width: 100%;
 }
@@ -52,10 +49,32 @@ img {
   
 }
 
+#answers {
+  margin-top: 20px;
+}
 .btn {
   background-color: #3C4859;
   color: white;
+  max-width: 400px;
+  margin: 0 auto 20px;
+  white-space: normal;
 }
+  .btn:hover {
+    color: white;
+  }
+.btn.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+  }
+.btn.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+  }
+  #left_btn {
+    margin-bottom: 20px;
+  }
 
 /*Quiz Section*/
 .quiz-question {
@@ -86,8 +105,36 @@ img {
 
 #question_number p, #score_box p, #question, #left_btn, #right_btn, #play_options, #next_question, #see_score, #result_headline, #result_message, #play_again, #see_answers {
   display: none;
+  /*visibility: hidden;*/
 }
 
+
+/* Large desktops and laptops */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* Landscape tablets and medium desktops */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /*.btn {
+    margin-bottom: 20px;
+  }*/
+}
+
+/* Landscape phones and portrait tablets */
+@media only screen and (max-width: 767px) {
+
+}
+
+/* Portrait phones and smaller */
+@media only screen and (max-width: 480px) {
+
+}
 
 
 

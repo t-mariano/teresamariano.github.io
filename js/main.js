@@ -3,27 +3,27 @@ $(document).ready(function(){
   // JSON: list of questions and answers with attributes stored in a variable
   var questions = [
     {
-      question: "How long is a piece of string?",
+      question: "You won't go to the movies with Larry because he's a <strong>klazomaniac</strong>. That means he is:",
       answers: [
       {
-        answer: "Its pretty long",
+        answer: "Someone who only ever speaks by shouting",
         correct: "true"
       },
       {
-        answer: "Its really really short",
+        answer: "Someone who only ever seems to complain",
         correct: "false"
       }
       ]
     },
     {
-      question: "How tall is a tree?",
+      question: "The Senator was quite <strong>Pecksniffian</strong> as he appealed to his constituents. That means he is:",
       answers: [
       {
-        answer: "Its pretty tall",
+        answer: "A pius and sincere person",
         correct: "false"
       },
       {
-        answer: "Its really really REALLY tall",
+        answer: "A self-righteous, hypocritical person",
         correct: "true"
       }
       ]
@@ -60,9 +60,14 @@ $(document).ready(function(){
 
     //show first answer button and set event handlers
     $("#answers").show();
-    $("#left_btn").show();
-    $("#right_btn").show();
 
+    //set links to display block so the text wraps and the background is full width
+    $("#left_btn").css("display","block");
+    $("#right_btn").css("display","block");
+
+    // remove success and danger styles from the buttons
+    $("a#left_btn, a#right_btn").removeClass("btn-success");
+    $("a#left_btn, a#right_btn").removeClass("btn-danger");
 
     // when answer is clicked
     // $("#play_options").show();
@@ -71,11 +76,11 @@ $(document).ready(function(){
     // load question & answers
     setQuestion(0);
     var questionNumber=getQuestionNumber();
-    console.log("this is question "+questionNumber+"!");
+    // console.log("this is question "+questionNumber+"!");
 
     setScore(0);
     var score=getScore();
-    console.log(" "+score+" ");
+    // console.log(" "+score+" ");
 
 
   }
@@ -87,7 +92,7 @@ $(document).ready(function(){
     var rightBtnText=questions[index].answers[1].answer;
 
     //add questions and answers to the page
-    $("#question").text(questionText);
+    $("#question").html(questionText);
     $("#left_btn").text(leftBtnText);
     $("#right_btn").text(rightBtnText);
     setAnswerButtons();
@@ -121,8 +126,6 @@ $(document).ready(function(){
     else {
       //change button color to red
 
-      //i award you no points, and may god have mercy on your soul
-
     }
 
     // turn off setScore event handler to prevent inflated scores
@@ -130,7 +133,7 @@ $(document).ready(function(){
 
     //check to see if there are any more questions
     var currentQuestion=parseInt(index)+1;
-    console.log("The next question is "+currentQuestion+" - The length is "+questions.length);
+    // console.log("The next question is "+currentQuestion+" - The length is "+questions.length);
     if (currentQuestion >= parseInt(questions.length)) {
       //we're all out of questions
       $("#next_question").hide();
@@ -143,6 +146,7 @@ $(document).ready(function(){
       $("#next_question").show();
     }
 
+    return answer;
 
   }
 
@@ -195,7 +199,14 @@ $(document).ready(function(){
       var questionNumber=getQuestionNumber();
 
       //call evaluateAnswer(index,answerindex)
-      evaluateAnswer(questionNumber, answerIndex); 
+      var correct=evaluateAnswer(questionNumber, answerIndex);
+
+      if (correct==="true"){
+        $(this).addClass("btn-success");
+      }
+      else {
+        $(this).addClass("btn-danger");
+      }
 
     });
   }
@@ -213,6 +224,9 @@ $(document).ready(function(){
   $("#next_question a").click(function(event){
     //dont change the URL
     event.preventDefault();
+    // remove success and danger styles from the buttons
+    $("a#left_btn, a#right_btn").removeClass("btn-success");
+    $("a#left_btn, a#right_btn").removeClass("btn-danger");
     //do stuff
     currentQuestion = getQuestionNumber();
     //console.log(currentQuestion);
